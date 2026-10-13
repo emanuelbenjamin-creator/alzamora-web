@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alzamora Café Lab · Café de especialidad peruano</title>
+  <meta name="description" content="Café de especialidad de Ayacucho, Cusco, Cajamarca, Amazonas y Puno. Tostado en Perú. Cold Brew 1:8.">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="announce">Envío a todo Lima · Pide por WhatsApp y te lo llevamos ☕</div>
+
+  <header class="header">
+    <div class="header__inner">
+      <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav nav--left">
+        <a href="#cafes">Cafés</a>
+        <a href="#cold-brew">Cold Brew</a>
+        <a href="#origen">Origen</a>
+      </nav>
+      <a href="#" class="brand" aria-label="Alzamora Café Lab, inicio">
+        <img src="img/logo.png" alt="Alzamora Café Lab" width="244" height="180">
+      </a>
+      <nav class="nav nav--right">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <button class="cart-btn" aria-label="Abrir carrito">
+          Carrito <span class="cart-count">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__media">
+        <img src="img/hero.webp" alt="Bolsas de café Cajamarca, Cusco y Ayacucho" width="725" height="610">
+      </div>
+      <div class="hero__copy">
+        <p class="eyebrow">Café de especialidad · Hecho en Perú</p>
+        <h1>Hay algo especial en estos granos.</h1>
+        <p class="lead">Microlotes de productores con nombre y apellido, de Ayacucho a Amazonas, tostados en pequeñas tandas en nuestro laboratorio.</p>
+        <div class="hero__ctas">
+          <a href="#cafes" class="btn">Comprar café</a>
+          <a href="#origen" class="btn btn--ghost">Conoce el origen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Ayacucho</span><span>●</span><span>Cusco</span><span>●</span><span>Cajamarca</span><span>●</span><span>Amazonas</span><span>●</span><span>Puno</span><span>●</span><span>Cold Brew 1:8</span><span>●</span>
+        <span>Ayacucho</span><span>●</span><span>Cusco</span><span>●</span><span>Cajamarca</span><span>●</span><span>Amazonas</span><span>●</span><span>Puno</span><span>●</span><span>Cold Brew 1:8</span><span>●</span>
+      </div>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <section class="section" id="cafes">
+      <div class="section__head">
+        <h2>Nuestros cafés</h2>
+        <div class="filters" role="group" aria-label="Filtrar cafés">
+          <button class="chip is-active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="frutal">Frutales</button>
+          <button class="chip" data-filter="dulce">Dulces</button>
+          <button class="chip" data-filter="especial">Edición especial</button>
+        </div>
+      </div>
+      <div class="grid" id="product-grid"><!-- generado por app.js --></div>
+    </section>
+
+    <!-- COLD BREW -->
+    <section class="feature" id="cold-brew">
+      <div class="feature__media">
+        <img src="img/ig/06.webp" alt="Cold Brew 1:8 servido con hielo" loading="lazy">
+        <img src="img/ig/17.webp" alt="Botella de Cold Brew en mano" loading="lazy">
+      </div>
+      <div class="feature__copy">
+        <p class="eyebrow">Extracción 24 h</p>
+        <h2>Cold Brew 1:8</h2>
+        <p>A veces solo necesitas un cold brew y dejar de sorprenderte tanto. Extraído en frío durante 24 horas: suave, dulce y con todo el carácter del origen. Listo para tomar o para mezclar con leche y tónica.</p>
+        <button class="btn btn--light" data-add="cold-brew">Agregar al carrito · <span data-price="cold-brew"></span></button>
+      </div>
+    </section>
+
+    <!-- ORIGEN -->
+    <section class="story" id="origen">
+      <div class="story__copy">
+        <p class="hand">Antes de cada taza…</p>
+        <h2>…hay alguien que nunca dejó de creer.</h2>
+        <p>Cada bolsa lleva el nombre del productor, la finca y la altura donde creció el café. Trabajamos directo con familias de Anco (Ayacucho), Santa Teresa (Cusco), Huabal y San Ignacio (Cajamarca) para pagar mejor y tostar mejor.</p>
+        <ul class="stats">
+          <li><strong>5</strong> regiones</li>
+          <li><strong>1,950</strong> m s. n. m.</li>
+          <li><strong>100%</strong> trazable</li>
+        </ul>
+      </div>
+      <div class="story__media">
+        <img src="img/ig/07.webp" alt="Productor en su cafetal" loading="lazy">
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="story story--reverse" id="nosotros">
+      <div class="story__copy">
+        <p class="eyebrow">Café Lab</p>
+        <h2>Tostamos, probamos y volvemos a probar.</h2>
+        <p>Somos un laboratorio de café: experimentamos con perfiles de tueste y métodos (V60, Siuren, prensa, cold brew) hasta encontrar la mejor versión de cada lote. Visítanos, pide una cata o llévate tu bolsa recién tostada.</p>
+        <a href="#contacto" class="btn">Visítanos</a>
+      </div>
+      <div class="story__media">
+        <img src="img/estante.webp" alt="Bolsas de Caturra, Bourbon y Amazonas en el estante" loading="lazy">
+      </div>
+    </section>
+
+    <!-- SUSCRIPCIÓN -->
+    <section class="sub">
+      <div class="sub__inner">
+        <h2>Nunca te quedes sin café</h2>
+        <p>Recibe una bolsa recién tostada cada 2 o 4 semanas. Rotamos orígenes para que pruebes todo Perú.</p>
+        <a class="btn btn--light" target="_blank" rel="noopener" data-wa="Hola, quiero información sobre la suscripción de café ☕">Quiero suscribirme</a>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section" id="instagram">
+      <div class="section__head">
+        <h2>@alzamoracafelab</h2>
+        <a class="link" href="https://www.instagram.com/alzamoracafelab/" target="_blank" rel="noopener">Síguenos en Instagram →</a>
+      </div>
+      <div class="ig" id="ig-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="footer__grid">
+      <div>
+        <img src="img/logo.png" alt="Alzamora Café Lab" class="footer__logo" width="244" height="180">
+        <p>Café de especialidad peruano.<br>Tostado con cariño en Lima.</p>
+      </div>
+      <div>
+        <h3>Tienda</h3>
+        <a href="#cafes">Cafés en grano y molido</a>
+        <a href="#cold-brew">Cold Brew</a>
+        <a href="#" data-wa="Hola, quiero información para pedidos mayoristas">Mayoristas</a>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <a href="#" data-wa="Hola Alzamora ☕">WhatsApp</a>
+        <a href="https://www.instagram.com/alzamoracafelab/" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hola@alzamoracafelab.com">hola@alzamoracafelab.com</a>
+      </div>
+      <form class="newsletter" onsubmit="event.preventDefault(); this.innerHTML='<p>¡Gracias! Te avisaremos de nuevos lotes.</p>'">
+        <h3>Nuevos lotes primero</h3>
+        <label for="nl-email" class="sr-only">Correo</label>
+        <div class="newsletter__row">
+          <input id="nl-email" type="email" placeholder="tu@correo.com" required>
+          <button class="btn" type="submit">Suscribirme</button>
+        </div>
+      </form>
+    </div>
+    <p class="footer__legal">© <span id="year"></span> Alzamora Café Lab · Hecho en Perú</p>
+  </footer>
+
+  <!-- CARRITO -->
+  <div class="overlay" hidden></div>
+  <aside class="drawer" aria-label="Carrito" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Tu carrito</h2>
+      <button class="drawer__close" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <ul class="drawer__items"></ul>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Total</span><strong class="total">S/ 0.00</strong></div>
+      <a class="btn btn--block checkout" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      <p class="drawer__note">Confirmamos stock, envío y pago (Yape, Plin o transferencia) por WhatsApp.</p>
+    </div>
+  </aside>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
