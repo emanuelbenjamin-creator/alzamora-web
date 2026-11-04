@@ -88,6 +88,7 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
   background: var(--orange); transform: scaleX(0); transform-origin: left; transition: transform .2s;
 }
 .nav a:hover::after { transform: scaleX(1); }
+.nav__mobile-only { display: none; }
 .cart-btn {
   border: 2px solid var(--brown); background: transparent; border-radius: 999px;
   padding: 7px 8px 7px 16px; font-weight: 700; font-size: .8rem; letter-spacing: .06em;
@@ -240,13 +241,8 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
 .footer__grid a:hover { opacity: 1; text-decoration: underline; }
 .footer h3 { color: var(--yellow); margin-bottom: 6px; }
 .footer__logo { width: 130px; filter: brightness(0) invert(.95) sepia(.2); }
-.newsletter { display: flex; flex-direction: column; gap: 14px; }
-.newsletter__row { display: flex; gap: 8px; }
-.newsletter input {
-  flex: 1; min-width: 0; padding: 14px 18px; border-radius: 999px; border: 0;
-  font: inherit; background: var(--cream); color: var(--ink);
-}
-.newsletter .btn { background: var(--orange); border-color: var(--orange); color: var(--brown-2); }
+.newsletter { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.footer__grid .newsletter .btn { background: var(--orange); border-color: var(--orange); color: var(--brown-2); opacity: 1; text-decoration: none; }
 .footer__legal {
   max-width: 1440px; margin: 48px auto 0; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.15);
   font-size: .8rem; opacity: .7;
@@ -300,6 +296,7 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
     display: flex; flex-direction: column; gap: 18px; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--cream); padding: 24px var(--gutter); border-bottom: 1px solid var(--line);
   }
+  .header.menu-open .nav__mobile-only { display: inline; }
   .brand img { height: 46px; }
   .hero, .feature, .story { grid-template-columns: 1fr; }
   .hero { min-height: 0; }
@@ -312,7 +309,6 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
   .cart-btn { padding: 6px; font-size: 0; gap: 0; }
   .cart-btn .cart-count { font-size: .75rem; }
   .footer__grid { grid-template-columns: 1fr; }
-  .newsletter__row { flex-direction: column; }
   .feature__media img:last-child { margin-top: 30px; }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -1,7 +1,7 @@
 /* =========================================================
    CONFIGURACIÓN — edita aquí número de WhatsApp y productos
    ========================================================= */
-const WHATSAPP = "51999999999"; // ← número real con código de país, sin + ni espacios
+const WHATSAPP = "51935791691"; // ← número real con código de país, sin + ni espacios
 
 // Precios de ejemplo (S/). Cámbialos por los reales.
 const PRODUCTS = [
@@ -132,6 +132,13 @@ $$(".chip").forEach((chip) =>
 /* --- Carrito --- */
 let cart = [];
 try { cart = JSON.parse(localStorage.getItem("alzamora-cart")) || []; } catch { cart = []; }
+// Refresca nombre, variante y precio desde PRODUCTS por si cambiaron desde la última visita
+cart = cart.flatMap((l) => {
+  const p = PRODUCTS.find((x) => x.id === l.id);
+  const vi = +String(l.key).split("|")[1];
+  const variant = p && (p.variants || GRIND)[vi];
+  return variant ? [{ ...l, name: p.name, variant, price: priceOf(p, vi) }] : [];
+});
 const save = () => { try { localStorage.setItem("alzamora-cart", JSON.stringify(cart)); } catch {} };
 
 function addToCart(id, vi) {
@@ -190,6 +197,7 @@ const drawer = $(".drawer"), overlay = $(".overlay");
 function openCart(open) {
   drawer.classList.toggle("is-open", open);
   drawer.setAttribute("aria-hidden", !open);
+  drawer.inert = !open;
   overlay.hidden = !open;
 }
 $(".cart-btn").addEventListener("click", () => openCart(true));
