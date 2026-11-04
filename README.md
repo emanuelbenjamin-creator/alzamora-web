@@ -14,9 +14,8 @@ python -m http.server 8000
 ```
 y abre http://localhost:8000
 
-## Publicar en GitHub Pages
-1. Crea un repositorio vacío en github.com (ej. `alzamora-web`).
-2. `git remote add origin https://github.com/TU_USUARIO/alzamora-web.git`
-3. `git push -u origin main`
-4. En el repo: **Settings → Pages → Branch: main / (root) → Save**.
-5. En 1–2 minutos estará en `https://TU_USUARIO.github.io/alzamora-web/`.
+## Publicación
+Publicado con GitHub Pages desde `main` (raíz) en
+https://emanuelbenjamin-creator.github.io/alzamora-web/
+
+Cada push a `main` actualiza el sitio en 1–2 minutos.

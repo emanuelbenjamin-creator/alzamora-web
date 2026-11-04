@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alzamora Café Lab · Café de especialidad peruano</title>
   <meta name="description" content="Café de especialidad de Ayacucho, Cusco, Cajamarca, Amazonas y Puno. Tostado en Perú. Cold Brew 1:8.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alzamora Café Lab · Café de especialidad peruano">
+  <meta property="og:description" content="Café de especialidad de Ayacucho, Cusco, Cajamarca, Amazonas y Puno. Tostado en Perú. Cold Brew 1:8.">
+  <meta property="og:image" content="https://emanuelbenjamin-creator.github.io/alzamora-web/img/hero.webp">
+  <meta property="og:url" content="https://emanuelbenjamin-creator.github.io/alzamora-web/">
   <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +29,8 @@
         <a href="#cafes">Cafés</a>
         <a href="#cold-brew">Cold Brew</a>
         <a href="#origen">Origen</a>
+        <a href="#nosotros" class="nav__mobile-only">Nosotros</a>
+        <a href="#contacto" class="nav__mobile-only">Contacto</a>
       </nav>
       <a href="#" class="brand" aria-label="Alzamora Café Lab, inicio">
         <img src="img/logo.png" alt="Alzamora Café Lab" width="244" height="180">
@@ -158,21 +165,18 @@
         <a href="https://www.instagram.com/alzamoracafelab/" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:hola@alzamoracafelab.com">hola@alzamoracafelab.com</a>
       </div>
-      <form class="newsletter" onsubmit="event.preventDefault(); this.innerHTML='<p>¡Gracias! Te avisaremos de nuevos lotes.</p>'">
+      <div class="newsletter">
         <h3>Nuevos lotes primero</h3>
-        <label for="nl-email" class="sr-only">Correo</label>
-        <div class="newsletter__row">
-          <input id="nl-email" type="email" placeholder="tu@correo.com" required>
-          <button class="btn" type="submit">Suscribirme</button>
-        </div>
-      </form>
+        <p>Te escribimos por WhatsApp cuando llegue un lote nuevo.</p>
+        <a class="btn" href="#" data-wa="Hola Alzamora ☕, quiero enterarme de nuevos lotes">Avísame por WhatsApp</a>
+      </div>
     </div>
     <p class="footer__legal">© <span id="year"></span> Alzamora Café Lab · Hecho en Perú</p>
   </footer>
 
   <!-- CARRITO -->
   <div class="overlay" hidden></div>
-  <aside class="drawer" aria-label="Carrito" aria-hidden="true">
+  <aside class="drawer" aria-label="Carrito" aria-hidden="true" inert>
     <div class="drawer__head">
       <h2>Tu carrito</h2>
       <button class="drawer__close" aria-label="Cerrar carrito">✕</button>
