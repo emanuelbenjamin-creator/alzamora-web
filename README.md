@@ -1,4 +1,4 @@
-# Alzamora Café Lab — web
+# Coffee Bear Café & Bistró — web
 
 Sitio estático (HTML + CSS + JS, sin dependencias) listo para GitHub Pages.
 

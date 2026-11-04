@@ -171,7 +171,7 @@ function renderCart(bump) {
 
   const checkout = $(".checkout");
   checkout.setAttribute("aria-disabled", cart.length ? "false" : "true");
-  const msg = "Hola Alzamora ☕, quiero hacer este pedido:\n\n" +
+  const msg = "Hola Coffee Bear ☕, quiero hacer este pedido:\n\n" +
     cart.map((l) => `• ${l.qty} × ${l.name} (${l.variant}) — ${money(l.qty * l.price)}`).join("\n") +
     `\n\nTotal: ${money(total)}\n\nNombre:\nDirección de entrega:`;
   checkout.href = waLink(msg);
@@ -219,7 +219,7 @@ $$(".nav--left a").forEach((a) => a.addEventListener("click", () => {
 const IG = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 $("#ig-grid").innerHTML = IG.map((n) => {
   const f = String(n).padStart(2, "0");
-  return `<a href="https://www.instagram.com/alzamoracafelab/" target="_blank" rel="noopener"><img src="img/ig/${f}.webp" alt="Publicación de Instagram ${n}" loading="lazy"></a>`;
+  return `<a href="https://www.instagram.com/pergaminocafe/" target="_blank" rel="noopener"><img src="img/ig/${f}.webp" alt="Publicación de Instagram ${n}" loading="lazy"></a>`;
 }).join("");
 
 $$("[data-wa]").forEach((a) => { a.href = waLink(a.dataset.wa); a.target = "_blank"; a.rel = "noopener"; });
