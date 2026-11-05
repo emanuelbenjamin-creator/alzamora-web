@@ -275,6 +275,15 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
 .drawer__note { font-size: .8rem; color: var(--muted); text-align: center; }
 .checkout[aria-disabled="true"] { opacity: .4; pointer-events: none; }
 
+/* WhatsApp flotante */
+.wa-float {
+  position: fixed; right: 20px; bottom: 20px; z-index: 35;
+  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
+  background: #25d366; color: #fff; box-shadow: 0 10px 24px -8px rgba(0, 0, 0, .45);
+  transition: transform .15s;
+}
+.wa-float:hover { transform: scale(1.08); }
+
 .toast {
   position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px);
   background: var(--brown-2); color: var(--cream); padding: 12px 22px; border-radius: 999px;
@@ -323,6 +332,8 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
   .cart-btn .cart-count { font-size: .75rem; }
   .footer__grid { grid-template-columns: 1fr; }
   .feature__media img:last-child { margin-top: 30px; }
+  .toast { bottom: 92px; }
+  .wa-float { right: 16px; bottom: 16px; width: 54px; height: 54px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
