@@ -204,36 +204,19 @@ $(".cart-btn").addEventListener("click", () => openCart(true));
 $(".drawer__close").addEventListener("click", () => openCart(false));
 overlay.addEventListener("click", () => openCart(false));
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") { openCart(false); openSections(false); }
+  if (e.key === "Escape") { openCart(false); openMenu(false); }
 });
 
 /* --- Menú móvil --- */
-const menuBtn = $(".menu-btn");
-menuBtn.addEventListener("click", () => {
-  const open = $(".header").classList.toggle("menu-open");
+const header = $(".header"), menuBtn = $(".menu-btn");
+function openMenu(open) {
+  header.classList.toggle("menu-open", open);
   menuBtn.setAttribute("aria-expanded", open);
-});
-$$(".nav--left a").forEach((a) => a.addEventListener("click", () => {
-  $(".header").classList.remove("menu-open"); menuBtn.setAttribute("aria-expanded", false);
-}));
-
-/* --- Menú de secciones --- */
-const sectionsBtn = $(".sections__btn"), sectionsList = $(".sections__list");
-const sectionLinks = $$(".sections__list a");
-function openSections(open) {
-  sectionsList.hidden = !open;
-  sectionsBtn.setAttribute("aria-expanded", open);
+  menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
 }
-sectionsBtn.addEventListener("click", () => openSections(sectionsList.hidden));
-sectionLinks.forEach((a) => a.addEventListener("click", () => openSections(false)));
-document.addEventListener("click", (e) => { if (!e.target.closest(".sections")) openSections(false); });
-
-// Resalta la sección que se está viendo
-const io = new IntersectionObserver((entries) => entries.forEach((en) => {
-  if (!en.isIntersecting) return;
-  sectionLinks.forEach((a) => a.classList.toggle("is-current", a.hash === "#" + en.target.id));
-}), { rootMargin: "-45% 0px -50% 0px" });
-sectionLinks.forEach((a) => { const s = $(a.hash); if (s) io.observe(s); });
+menuBtn.addEventListener("click", () => openMenu(!header.classList.contains("menu-open")));
+$$(".nav--left a").forEach((a) => a.addEventListener("click", () => openMenu(false)));
+document.addEventListener("click", (e) => { if (!e.target.closest(".header")) openMenu(false); });
 
 /* --- Instagram, WhatsApp, varios --- */
 const IG = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
