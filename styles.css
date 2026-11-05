@@ -278,11 +278,16 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
 /* WhatsApp flotante */
 .wa-float {
   position: fixed; right: 20px; bottom: 20px; z-index: 35;
-  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
-  background: #25d366; color: #fff; box-shadow: 0 10px 24px -8px rgba(0, 0, 0, .45);
-  transition: transform .15s;
+  width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center;
+  background: #25d366; color: #fff;
+  box-shadow: 0 0 22px 4px rgba(37, 211, 102, .55), 0 8px 20px -8px rgba(0, 0, 0, .4);
+  transition: transform .15s; animation: wa-glow 2.4s ease-in-out infinite;
 }
+.wa-float svg { width: 62%; height: 62%; }
 .wa-float:hover { transform: scale(1.08); }
+@keyframes wa-glow {
+  50% { box-shadow: 0 0 34px 10px rgba(37, 211, 102, .7), 0 8px 20px -8px rgba(0, 0, 0, .4); }
+}
 
 .toast {
   position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 20px);
@@ -333,7 +338,7 @@ h3 { font-size: .85rem; letter-spacing: .08em; }
   .footer__grid { grid-template-columns: 1fr; }
   .feature__media img:last-child { margin-top: 30px; }
   .toast { bottom: 92px; }
-  .wa-float { right: 16px; bottom: 16px; width: 54px; height: 54px; }
+  .wa-float { right: 18px; bottom: 18px; width: 58px; height: 58px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
